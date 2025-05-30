@@ -363,13 +363,12 @@ export default function HomePage() {
             </p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-light mb-6 leading-tight">
               Gewinnen Sie Ihre abrechenbaren Stunden zurück.
-              <br className="hidden md:block" />
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-10 mx-auto md:mx-0 leading-relaxed font-normal">
-              Schluss mit dem Ertrinken in administrativen Aufgaben <br /> und
-              repetitiver Dokumentenarbeit. Reduzieren Sie <br /> nicht
-              abrechenbare Stunden und gewinnen Sie Freiraum <br /> für
-              strategische Beratung und Mandantenerfolg.
+              Schluss mit dem Ertrinken in administrativen Aufgaben und
+              repetitiver Dokumentenarbeit. Reduzieren Sie nicht abrechenbare
+              Stunden und gewinnen Sie Freiraum für strategische Beratung und
+              Mandantenerfolg.
             </p>
             <button
               className="

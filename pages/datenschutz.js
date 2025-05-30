@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { Figtree } from "next/font/google";
-import Footer from "../../components/Footer";
+import Footer from "../components/Footer";
 
 const figtree = Figtree({
   subsets: ["latin"],

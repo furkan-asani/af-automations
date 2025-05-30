@@ -455,32 +455,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <footer
-        id="footer-contact"
-        className="bg-gray-900 text-white py-12 text-center"
-      >
-        <p className="mb-3 text-gray-300">
-          © {new Date().getFullYear()} AF Automations. Alle Rechte vorbehalten.
-        </p>
-        <p className="text-sm text-gray-400 mb-4">
-          Intelligente Automatisierung für die moderne Anwaltskanzlei.
-          <a
-            href="mailto:info@afautomations.de"
-            className="underline hover:text-blue-400 ml-2"
-          >
-            Kontaktieren Sie uns
-          </a>
-        </p>
-        <div className="text-sm text-gray-400 space-x-4">
-          <a href="/impressum" className="underline hover:text-blue-400">
-            Impressum
-          </a>
-          <span>|</span>
-          <a href="/datenschutz" className="underline hover:text-blue-400">
-            Datenschutz
-          </a>
-        </div>
-      </footer>
+
       {/* Floating Contact Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <button
@@ -694,7 +669,7 @@ export default function HomePage() {
           },
         }}
       />
-      <Footer /> {/* Use the Footer component here */}
+      <Footer />
     </div>
   );
 }

@@ -265,7 +265,7 @@ const Carousel: React.FC<CarouselProps> = ({
                     rel="noopener noreferrer"
                     className="
                       inline-block
-                      px-8 py-4
+                      px-8 py-2
                       border-2 border-[#FF6B00] text-[#FF6B00]
                       bg-transparent rounded-full
                       text-base font-medium

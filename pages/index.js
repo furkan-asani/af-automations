@@ -297,7 +297,7 @@ export default function HomePage() {
           </a>
           <div className="flex items-center space-x-6">
             <a
-              href="#social-proof"
+              href="#carousel-section"
               className="hover:text-gray-300 transition-colors"
             >
               Fallstudien
@@ -417,7 +417,9 @@ export default function HomePage() {
 
         {/* Carousel component, now outside the container, can span full width */}
         {/* The Carousel's own outermost div has `w-full`, so it will expand to the width of the <section> */}
-        <Carousel slides={useCasesSlides} autoplayInterval={7000} />
+        <div id="carousel-section">
+          <Carousel slides={useCasesSlides} autoplayInterval={7000} />
+        </div>
       </section>
       {/* --- END OF HOW IT WORKS SECTION --- */}
 

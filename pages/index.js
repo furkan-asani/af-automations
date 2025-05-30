@@ -425,7 +425,7 @@ export default function HomePage() {
       <section id="social-proof" className="pb-16 bg-gray-50 text-gray-800">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-10">
-            Vertraut von zukunftsorientierten Juristen
+            Was unsere Kunden sagen:
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             Erfahren Sie, wie die KI-Lösungen von AF Automations Kanzleien wie
@@ -466,7 +466,7 @@ export default function HomePage() {
         <p className="mb-3 text-gray-300">
           © {new Date().getFullYear()} AF Automations. Alle Rechte vorbehalten.
         </p>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-gray-400 mb-4">
           Intelligente Automatisierung für die moderne Anwaltskanzlei.
           <a
             href="mailto:info@afautomations.de"
@@ -475,6 +475,15 @@ export default function HomePage() {
             Kontaktieren Sie uns
           </a>
         </p>
+        <div className="text-sm text-gray-400 space-x-4">
+          <a href="/impressum" className="underline hover:text-blue-400">
+            Impressum
+          </a>
+          <span>|</span>
+          <a href="/datenschutz" className="underline hover:text-blue-400">
+            Datenschutz
+          </a>
+        </div>
       </footer>
 
       {/* Floating Contact Button */}

@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { Figtree } from "next/font/google";
+import Footer from "../../components/Footer";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -156,14 +157,7 @@ export default function DatenschutzPage() {
       </main>
 
       {/* Simple Footer - consider a shared component later */}
-      <footer className="bg-black text-white py-8 text-center mt-16">
-        <p className="mb-3 text-gray-300">
-          © {new Date().getFullYear()} AF Automations. Alle Rechte vorbehalten.
-        </p>
-        <p className="text-sm text-gray-400">
-          Intelligente Automatisierung für die moderne Anwaltskanzlei.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }

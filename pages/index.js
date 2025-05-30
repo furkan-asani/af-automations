@@ -24,6 +24,7 @@ import Carousel from "../components/carousel";
 import { useCasesSlides } from "../components/slides-data";
 import AppointmentBooking from "../components/AppointmentBooking";
 import TestimonialCarousel from "../components/TestimonialCarousel";
+import Footer from "../components/Footer"; // Import the new Footer component
 // Ensure correct paths for your components
 
 // Initialize Figtree font with a range of weights
@@ -285,7 +286,6 @@ export default function HomePage() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       {/* Navigation Bar */}
       <nav className="relative top-0 left-0 right-0 bg-black text-white shadow-lg backdrop-blur-md">
         <div className="max-w-screen-xl mx-auto px-6 sm:px-8 py-3 sm:py-4 flex justify-between items-center">
@@ -311,7 +311,6 @@ export default function HomePage() {
           </div>
         </div>
       </nav>
-
       <header className="relative bg-black text-white min-h-screen flex items-center p-6 sm:p-8 overflow-hidden">
         <Particles
           id="tsparticles"
@@ -391,7 +390,6 @@ export default function HomePage() {
           </div>
         </div>
       </header>
-
       {/* --- HOW IT WORKS SECTION - MODIFIED --- */}
       <section
         id="how-it-works"
@@ -421,7 +419,6 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- END OF HOW IT WORKS SECTION --- */}
-
       <section id="social-proof" className="pb-16 bg-gray-50 text-gray-800">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-10">
@@ -458,7 +455,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <footer
         id="footer-contact"
         className="bg-gray-900 text-white py-12 text-center"
@@ -485,7 +481,6 @@ export default function HomePage() {
           </a>
         </div>
       </footer>
-
       {/* Floating Contact Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <button
@@ -523,7 +518,6 @@ export default function HomePage() {
           <div className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
         </button>
       </div>
-
       {/* Modal for Blueprint Request */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
@@ -658,13 +652,11 @@ export default function HomePage() {
           </div>
         </div>
       )}
-
       {/* Appointment Booking Modal */}
       <AppointmentBooking
         isOpen={isAppointmentModalOpen}
         onClose={() => setIsAppointmentModalOpen(false)}
       />
-
       {/* Toast Notifications */}
       <Toaster
         position="top-center"
@@ -702,6 +694,7 @@ export default function HomePage() {
           },
         }}
       />
+      <Footer /> {/* Use the Footer component here */}
     </div>
   );
 }

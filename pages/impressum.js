@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { Figtree } from "next/font/google";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -18,31 +19,7 @@ export default function ImpressumPage() {
         {/* Prevent indexing of legal pages */}
       </Head>
 
-      {/* Simple Navbar - consider a shared component later */}
-      <nav className="bg-black text-white shadow-lg backdrop-blur-md">
-        <div className="max-w-screen-xl mx-auto px-6 sm:px-8 py-3 sm:py-4 flex justify-between items-center">
-          <a
-            href="/"
-            className="text-xl font-semibold sm:ml-[-38px] hover:text-gray-300 transition-colors"
-          >
-            AF Automations
-          </a>
-          <div className="flex items-center space-x-6">
-            <a
-              href="/#social-proof"
-              className="hover:text-gray-300 transition-colors"
-            >
-              Fallstudien
-            </a>
-            <a
-              href="/#footer-contact"
-              className="hover:text-gray-300 transition-colors"
-            >
-              Kontakt
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       <main className="max-w-screen-md mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <h1 className="text-4xl sm:text-5xl font-bold mb-8 text-center text-[#30D5C8]">
@@ -267,7 +244,6 @@ export default function ImpressumPage() {
         </div>
       </main>
 
-      {/* Simple Footer - consider a shared component later */}
       <Footer />
     </div>
   );

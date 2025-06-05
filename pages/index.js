@@ -361,7 +361,7 @@ export default function HomePage() {
               KI-GESTÜTZTE JURISTISCHE LÖSUNGEN
             </p>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-light mb-6 leading-tight">
-              Gewinnen Sie Ihre abrechenbaren Stunden zurück.
+              Gewinnen Sie Ihre abrechenbaren Stunden zurück
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-10 mx-auto md:mx-0 leading-relaxed font-normal">
               Schluss mit dem Ertrinken in administrativen Aufgaben und
@@ -400,7 +400,7 @@ export default function HomePage() {
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
               So verwandeln Sie Ihre Kanzlei in eine Gewinnmaschine – mit
-              weniger Aufwand als je zuvor.
+              weniger Aufwand als je zuvor
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Stellen Sie sich vor, Ihr profitabelster Mitarbeiter arbeitet

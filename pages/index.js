@@ -15,8 +15,7 @@ import { Stars } from "@react-three/drei";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import toast, { Toaster } from "react-hot-toast";
-// useRouter is not used in this snippet, but keeping it if used elsewhere
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 // Import the Figtree font
 import { Figtree } from "next/font/google";
@@ -198,7 +197,7 @@ const GlobalSphereCanvas = () => (
 // --- END OF Global Sphere ---
 
 export default function HomePage() {
-  // const router = useRouter(); // Not used here, can be removed if not used elsewhere
+  const router = useRouter();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "" });
@@ -268,6 +267,12 @@ export default function HomePage() {
       );
     }
   };
+
+  useEffect(() => {
+    if (router.isReady && router.query.appointment === "true") {
+      setIsAppointmentModalOpen(true);
+    }
+  }, [router.isReady, router.query]);
 
   useEffect(
     () => {
@@ -364,10 +369,12 @@ export default function HomePage() {
               Gewinnen Sie Ihre abrechenbaren Stunden zurück
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-10 mx-auto md:mx-0 leading-relaxed font-normal">
-              Schluss mit dem Ertrinken in administrativen Aufgaben und
-              repetitiver Dokumentenarbeit. Reduzieren Sie nicht abrechenbare
-              Stunden und gewinnen Sie Freiraum für strategische Beratung und
-              Mandantenerfolg.
+              Die meisten Kanzleien wissen, dass ineffiziente Abläufe sie
+              täglich Zeit kosten. Die wenigsten wissen, wie viele Stunden pro
+              Monat das wirklich sind – oder wie einfach sich das beheben lässt.
+              In diesem Blueprint erfahren Sie, wie Sie 5 Kernprozesse in Ihrer
+              Kanzlei mit KI-gestützten Systemen automatisieren – und damit bis
+              zu 30 Stunden pro Monat zurückgewinnen.
             </p>
             <button
               className="

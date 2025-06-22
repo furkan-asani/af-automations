@@ -79,7 +79,11 @@ const AppointmentBooking: React.FC<AppointmentBookingProps> = ({
   const fetchAvailableSlots = async (date: string) => {
     setLoading(true);
     try {
-      const response = await fetch(`/api/appointments?date=${date}`);
+      const apiBaseUrl = process.env.NEXT_PUBLIC_APPOINTMENTS_API_URL;
+      if (!apiBaseUrl) {
+        throw new Error("NEXT_PUBLIC_APPOINTMENTS_API_URL is not set");
+      }
+      const response = await fetch(`${apiBaseUrl}/appointments?date=${date}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -136,7 +140,11 @@ const AppointmentBooking: React.FC<AppointmentBookingProps> = ({
     setLoading(true);
 
     try {
-      const response = await fetch("/api/appointments", {
+      const apiBaseUrl = process.env.NEXT_PUBLIC_APPOINTMENTS_API_URL;
+      if (!apiBaseUrl) {
+        throw new Error("NEXT_PUBLIC_APPOINTMENTS_API_URL is not set");
+      }
+      const response = await fetch(`${apiBaseUrl}/appointments`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

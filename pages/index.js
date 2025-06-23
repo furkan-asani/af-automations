@@ -242,12 +242,21 @@ export default function HomePage() {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/contact", {
+      const apiBaseUrl = process.env.NEXT_PUBLIC_APPOINTMENTS_API_URL;
+      if (!apiBaseUrl) {
+        toast.error("API URL is not configured.");
+        return;
+      }
+
+      const response = await fetch(`${apiBaseUrl}/contacts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          fullName: formData.name,
+          email: formData.email,
+        }),
       });
 
       const result = await response.json();

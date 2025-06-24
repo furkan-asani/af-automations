@@ -200,8 +200,10 @@ export default function HomePage() {
   const router = useRouter();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "" });
   const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
+
+  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Testimonial data for carousel
   const testimonials = [
@@ -240,6 +242,7 @@ export default function HomePage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     try {
       const apiBaseUrl = process.env.NEXT_PUBLIC_APPOINTMENTS_API_URL;
@@ -274,6 +277,8 @@ export default function HomePage() {
       toast.error(
         "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
       );
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -610,18 +615,41 @@ export default function HomePage() {
                 <div className="flex gap-3 pt-2">
                   <button
                     type="submit"
-                    disabled={!formData.name || !formData.email}
+                    disabled={isSubmitting || !formData.name || !formData.email}
                     className="
-                      flex-1 py-3 px-6 
+                      flex-1 py-3 px-6 flex items-center justify-center
                       bg-[#30D5C8] hover:bg-[#2BC4B8] 
-                      disabled:bg-gray-300 disabled:cursor-not-allowed
+                      disabled:bg-gray-400 disabled:cursor-not-allowed
                       text-white font-semibold rounded-lg
                       transition-all duration-200
                       focus:outline-none focus:ring-2 focus:ring-[#30D5C8] focus:ring-offset-2
                       transform hover:scale-[1.02] disabled:hover:scale-100
                     "
                   >
-                    Blueprint kostenlos erhalten
+                    {isSubmitting ? (
+                      <svg
+                        className="animate-spin h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                    ) : (
+                      "Blueprint kostenlos erhalten"
+                    )}
                   </button>
 
                   <button

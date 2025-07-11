@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 interface AppointmentBookingProps {
   isOpen: boolean;
   onClose: () => void;
+  initialMessage?: string;
 }
 
 interface TimeSlot {
@@ -16,6 +17,7 @@ interface TimeSlot {
 const AppointmentBooking: React.FC<AppointmentBookingProps> = ({
   isOpen,
   onClose,
+  initialMessage,
 }) => {
   const [selectedDate, setSelectedDate] = useState<string>("");
   const [selectedTime, setSelectedTime] = useState<string>("");
@@ -24,11 +26,20 @@ const AppointmentBooking: React.FC<AppointmentBookingProps> = ({
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    message: initialMessage || "",
   });
   const [activeAccordion, setActiveAccordion] = useState<
     "date" | "time" | "details" | null
   >("date");
+
+  // Reset message when modal opens/closes or initialMessage changes
+  React.useEffect(() => {
+    if (isOpen) {
+      setFormData((prev) => ({ ...prev, message: initialMessage || "" }));
+    } else {
+      setFormData((prev) => ({ ...prev, message: "" }));
+    }
+  }, [isOpen, initialMessage]);
 
   // Get next 30 days for date selection
   const getAvailableDates = () => {

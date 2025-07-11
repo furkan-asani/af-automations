@@ -96,7 +96,11 @@ const ChevronRightIcon = () => (
 const HEADER_MIN_HEIGHT = 140; // px, adjust for best fit
 const AUTOPLAY_INTERVAL = 5000;
 
-const PricingPlans = () => {
+interface PricingPlansProps {
+  onRequest?: (offer: string) => void;
+}
+
+const PricingPlans: React.FC<PricingPlansProps> = ({ onRequest }) => {
   // Carousel state for mobile
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -171,7 +175,10 @@ const PricingPlans = () => {
                 </span>
                 <span className="text-gray-500 text-sm">einmalig</span>
               </div>
-              <button className="w-full py-2 rounded-lg font-bold text-base bg-black text-white hover:bg-gray-800 shadow transition mb-5">
+              <button
+                className="w-full py-2 rounded-lg font-bold text-base bg-[#30D5C8] text-white hover:bg-[#0F1F36] shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-translate-y-1 duration-300 ease-out hover:animate-none transition mb-5"
+                onClick={() => onRequest && onRequest(product.name)}
+              >
                 Jetzt anfragen
               </button>
               <ul className="text-left space-y-2 w-full">
@@ -229,7 +236,10 @@ const PricingPlans = () => {
                       </span>
                       <span className="text-gray-500 text-sm">einmalig</span>
                     </div>
-                    <button className="w-full py-2 rounded-lg font-bold text-base bg-black text-white hover:bg-gray-800 shadow transition mb-5">
+                    <button
+                      className="w-full py-2 rounded-lg font-bold text-base bg-[#30D5C8] text-white hover:bg-gray-800 shadow transition mb-5"
+                      onClick={() => onRequest && onRequest(product.name)}
+                    >
                       Jetzt anfragen
                     </button>
                     <ul className="text-left space-y-2 w-full">

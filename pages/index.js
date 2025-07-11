@@ -202,6 +202,8 @@ export default function HomePage() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
+  const [appointmentInitialMessage, setAppointmentInitialMessage] =
+    useState("");
 
   const [formData, setFormData] = useState({ name: "", email: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -281,6 +283,16 @@ export default function HomePage() {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleOpenAppointmentModal = () => {
+    setAppointmentInitialMessage("");
+    setIsAppointmentModalOpen(true);
+  };
+
+  const handleRequestOffer = (offer) => {
+    setAppointmentInitialMessage(`Hi, ich bin interessiert an ${offer}.`);
+    setIsAppointmentModalOpen(true);
   };
 
   useEffect(() => {
@@ -441,7 +453,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- END OF HOW IT WORKS SECTION --- */}
-      <PricingPlans />
+      <PricingPlans onRequest={handleRequestOffer} />
       <section id="social-proof" className="pb-16 bg-gray-50 text-gray-800">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-10">
@@ -482,7 +494,7 @@ export default function HomePage() {
       {/* Floating Contact Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <button
-          onClick={() => setIsAppointmentModalOpen(true)}
+          onClick={handleOpenAppointmentModal}
           className="
             group flex items-center
             bg-[#30D5C8]
@@ -677,6 +689,7 @@ export default function HomePage() {
       <AppointmentBooking
         isOpen={isAppointmentModalOpen}
         onClose={() => setIsAppointmentModalOpen(false)}
+        initialMessage={appointmentInitialMessage}
       />
       {/* Toast Notifications */}
       <Toaster

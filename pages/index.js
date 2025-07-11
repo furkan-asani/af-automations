@@ -23,6 +23,7 @@ import Carousel from "../components/carousel";
 import { useCasesSlides } from "../components/slides-data";
 import AppointmentBooking from "../components/AppointmentBooking";
 import TestimonialCarousel from "../components/TestimonialCarousel";
+import PricingPlans from "../components/PricingPlans";
 import Footer from "../components/Footer"; // Import the new Footer component
 // Ensure correct paths for your components
 
@@ -440,6 +441,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- END OF HOW IT WORKS SECTION --- */}
+      <PricingPlans />
       <section id="social-proof" className="pb-16 bg-gray-50 text-gray-800">
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-10">

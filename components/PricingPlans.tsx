@@ -4,7 +4,7 @@ const products = [
   {
     name: "KI & Automatisierungs-Strategie-Session",
     description:
-      "Wir finden Zeitfresser, bauen direkt Automationen. Du gehst mit Klarheit & Ergebnissen raus.",
+      "Wir finden Zeitfresser, bauen direkt Automationen. Sie gehen mit Klarheit & Ergebnissen raus.",
     price: "1.500€",
     features: [
       "Prozess- & Potenzialanalyse",
@@ -18,7 +18,7 @@ const products = [
   {
     name: "PrivateGPT - 100% Privat & DSGVO-konform",
     description:
-      "Deine eigene, sichere KI. Keine Cloud, volle Kontrolle. Sofort einsatzbereit. Mit Zitaten, Referenzen & Quellen.",
+      "Ihre eigene, sichere KI. Keine Cloud, volle Kontrolle. Sofort einsatzbereit. Mit Zitaten, Referenzen & Quellen.",
     price: "3.500€",
     features: [
       "Private KI, keine Cloud",
@@ -140,8 +140,11 @@ const PricingPlans: React.FC<PricingPlansProps> = ({ onRequest }) => {
   }, [goToNext]);
 
   return (
-    <section className="w-full bg-white py-12">
+    <section className="w-full bg-white py-16">
       <div className="container mx-auto px-4 sm:px-20">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-center">
+          Unsere beliebtesten Angebote
+        </h2>
         {/* Desktop: row, Mobile: carousel */}
         <div className="hidden md:flex flex-row gap-6 md:gap-4 justify-center items-stretch">
           {products.map((product, idx) => (

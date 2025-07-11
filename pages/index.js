@@ -425,7 +425,7 @@ export default function HomePage() {
         </div>
       </header>
       {/* --- HOW IT WORKS SECTION - MODIFIED --- */}
-      <section id="how-it-works" className="py-16 sm:py-20 text-gray-800">
+      <section id="how-it-works" className="pt-16 sm:pt-20 text-gray-800">
         {/* Container for the introductory text, centered and with horizontal padding */}
         <div className="container mx-auto px-4 sm:px-6 mb-12">
           <div className="text-center">

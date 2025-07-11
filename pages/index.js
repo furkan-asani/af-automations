@@ -425,10 +425,7 @@ export default function HomePage() {
         </div>
       </header>
       {/* --- HOW IT WORKS SECTION - MODIFIED --- */}
-      <section
-        id="how-it-works"
-        className="py-16 sm:py-20 bg-slate-50 text-gray-800"
-      >
+      <section id="how-it-works" className="py-16 sm:py-20 text-gray-800">
         {/* Container for the introductory text, centered and with horizontal padding */}
         <div className="container mx-auto px-4 sm:px-6 mb-12">
           <div className="text-center">
@@ -456,7 +453,7 @@ export default function HomePage() {
       <PricingPlans onRequest={handleRequestOffer} />
       <section id="social-proof" className="pb-16 bg-gray-50 text-gray-800">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-10 pt-10">
             Was unsere Kunden sagen:
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">

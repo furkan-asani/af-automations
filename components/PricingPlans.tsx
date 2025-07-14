@@ -4,7 +4,7 @@ const products = [
   {
     name: "KI & Automatisierungs-Strategie-Session",
     description:
-      "Wir finden Zeitfresser, bauen direkt Automationen. Sie gehen mit Klarheit & Ergebnissen raus.",
+      "Wir finden Zeitfresser, bauen direkt Automatisierungen. Sie gehen mit Klarheit & Ergebnissen raus.",
     price: "1.500€",
     features: [
       "Prozess- & Potenzialanalyse",
@@ -33,7 +33,7 @@ const products = [
   {
     name: "Premium KI & Automatisierungsberatung",
     description:
-      "Komplettpaket: Von Idee bis laufende Automatisierung. End-to-End, alles aus einer Hand.",
+      "Komplettpaket: Von der Idee bis zur laufenden Automatisierung. End-to-End, alles aus einer Hand.",
     price: "5.000€",
     features: [
       "Discovery-Workshop",

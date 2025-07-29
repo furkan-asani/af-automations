@@ -547,7 +547,20 @@ export default function HomePage() {
           </div>
 
           {/* Founders Grid - Same Height */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8">
+            <FounderCard
+              imageUrl="/images/alessio.jpg"
+              name="Alessio"
+              role="Co-Founder & Product Manager"
+              bio="Technischer Visionär mit Expertise in KI und Automatisierung. Alessio entwickelt die innovativen Lösungen, die Kanzleien revolutionieren."
+              expertise={[
+                "Machine Learning",
+                "Software Architecture",
+                "Automation",
+                "System Design",
+              ]}
+              experience="10+ Jahre Erfahrung"
+            />{" "}
             <FounderCard
               imageUrl="/images/placeholder.png"
               name="Furkan"
@@ -561,26 +574,6 @@ export default function HomePage() {
               ]}
               experience="8+ Jahre Erfahrung"
             />
-            <FounderCard
-              imageUrl="/images/alessio.jpg"
-              name="Alessio"
-              role="Co-Founder & Product Manager"
-              bio="Technischer Visionär mit Expertise in KI und Automatisierung. Alessio entwickelt die innovativen Lösungen, die Kanzleien revolutionieren."
-              expertise={[
-                "Machine Learning",
-                "Software Architecture",
-                "Automation",
-                "System Design",
-              ]}
-              experience="10+ Jahre Erfahrung"
-            />
-          </div>
-
-          {/* Centered CTA */}
-          <div className="text-center">
-            <button className="px-8 py-4 rounded-full bg-white hover:bg-gray-200 text-black font-semibold text-base transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 shadow-lg hover:shadow-xl">
-              Jetzt Termin vereinbaren
-            </button>
           </div>
         </div>
       </section>

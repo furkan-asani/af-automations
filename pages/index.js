@@ -336,6 +336,12 @@ export default function HomePage() {
               Fallstudien
             </a>
             <a
+              href="#founders"
+              className="hover:text-gray-300 transition-colors"
+            >
+              Team
+            </a>
+            <a
               href="#footer-contact"
               className="hover:text-gray-300 transition-colors"
             >
@@ -451,152 +457,6 @@ export default function HomePage() {
         </div>
       </section>
       {/* --- END OF HOW IT WORKS SECTION --- */}
-      {/* --- FOUNDERS SECTION --- */}
-      <section
-        id="founders"
-        className="relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-[#30D5C8] py-20 text-white sm:py-28"
-      >
-        {/* Dynamic Background with Curved Lines */}
-        <div className="absolute inset-0">
-          {/* Main Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900/90 to-[#30D5C8]"></div>
-
-          {/* Curved Line Patterns */}
-          <div className="absolute inset-0 opacity-30">
-            <svg
-              className="absolute right-0 top-0 h-full w-full"
-              viewBox="0 0 1200 800"
-              fill="none"
-            >
-              {/* Multiple curved lines creating depth */}
-              <path
-                d="M800 0 Q1000 200 1200 100 L1200 0 Z"
-                fill="url(#gradient1)"
-                className="opacity-40"
-              />
-              <path
-                d="M900 0 Q1100 250 1200 150 L1200 0 Z"
-                fill="url(#gradient2)"
-                className="opacity-30"
-              />
-              <path
-                d="M1000 0 Q1150 300 1200 200 L1200 0 Z"
-                fill="url(#gradient3)"
-                className="opacity-20"
-              />
-              <defs>
-                <linearGradient
-                  id="gradient1"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="#30D5C8" stopOpacity="0.1" />
-                  <stop offset="100%" stopColor="#50E0D0" stopOpacity="0.3" />
-                </linearGradient>
-                <linearGradient
-                  id="gradient2"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="#50E0D0" stopOpacity="0.1" />
-                  <stop offset="100%" stopColor="#60E6D7" stopOpacity="0.2" />
-                </linearGradient>
-                <linearGradient
-                  id="gradient3"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="#60E6D7" stopOpacity="0.05" />
-                  <stop offset="100%" stopColor="#30D5C8" stopOpacity="0.15" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          {/* Additional curved overlay for depth */}
-          <div className="absolute bottom-0 right-0 h-2/3 w-2/3 bg-gradient-to-tl from-[#30D5C8]/20 to-transparent opacity-50"></div>
-        </div>
-
-        <div className="container relative z-10 mx-auto max-w-screen-xl px-4 sm:px-6">
-          {/* Left side content */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  Wir sind die Architekten
-                  <span className="block text-[#30D5C8]">Ihrer Effizienz</span>
-                </h2>
-                <p className="mt-6 text-xl text-gray-300 leading-relaxed">
-                  Wir kombinieren juristisches Fachwissen mit technischer
-                  Exzellenz, um Ihrer Kanzlei die Werkzeuge an die Hand zu
-                  geben, die sie für beispiellosen Erfolg benötigt.
-                </p>
-              </div>
-
-              {/* Stats */}
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="text-4xl font-bold text-[#30D5C8]">8+</div>
-                  <div className="text-gray-300">Jahre Erfahrung</div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="flex -space-x-2">
-                    <div className="w-8 h-8 rounded-full bg-[#30D5C8] border-2 border-white"></div>
-                    <div className="w-8 h-8 rounded-full bg-[#50E0D0] border-2 border-white"></div>
-                    <div className="w-8 h-8 rounded-full bg-[#60E6D7] border-2 border-white flex items-center justify-center text-xs font-bold text-black">
-                      +
-                    </div>
-                  </div>
-                  <div className="text-gray-300">50+ Zufriedene Kanzleien</div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <button className="group relative overflow-hidden rounded-full bg-white text-black px-8 py-4 font-semibold text-lg shadow-2xl transition-all duration-300 hover:bg-[#30D5C8] hover:text-white hover:scale-105">
-                <span className="relative z-10">Jetzt Termin vereinbaren</span>
-                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[#30D5C8]/20 to-transparent transition-transform duration-700 group-hover:translate-x-full"></div>
-              </button>
-            </div>
-
-            {/* Right side - Founder Cards */}
-            <div className="flex flex-col space-y-8">
-              <FounderCard
-                imageUrl="/images/placeholder.png"
-                name="Furkan"
-                role="Co-Founder & CEO"
-                bio="Experte für Geschäftsstrategie und KI-Integration. Furkan führt AF Automations mit einer Vision für transformative juristische Technologien."
-                expertise={[
-                  "Business Strategy",
-                  "AI Implementation",
-                  "Legal Tech",
-                  "Process Optimization",
-                ]}
-                experience="8+ Jahre Erfahrung"
-              />
-              <FounderCard
-                imageUrl="/images/placeholder.png"
-                name="Arda"
-                role="Co-Founder & CTO"
-                bio="Technischer Visionär mit Expertise in KI und Automatisierung. Arda entwickelt die innovativen Lösungen, die Kanzleien revolutionieren."
-                expertise={[
-                  "Machine Learning",
-                  "Software Architecture",
-                  "Automation",
-                  "System Design",
-                ]}
-                experience="10+ Jahre Erfahrung"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* --- END OF FOUNDERS SECTION --- */}
       <PricingPlans onRequest={handleRequestOffer} />
       <section id="social-proof" className="pb-16 bg-gray-50 text-gray-800">
         <div className="container mx-auto px-4 sm:px-6 text-center">
@@ -634,6 +494,97 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* --- FOUNDERS SECTION --- */}
+      <section
+        id="founders"
+        className="relative overflow-hidden bg-gradient-to-b from-black to-[#0A192F] py-20 text-white sm:py-28"
+      >
+        {/* Modern Background Structure */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A192F] to-[#1e293b]"></div>
+
+          {/* Geometric Background Elements */}
+          <div className="absolute inset-0">
+            {/* Large geometric shapes */}
+            <div className="absolute top-10 right-10 w-64 h-64 bg-[#30D5C8]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 left-10 w-48 h-48 bg-[#30D5C8]/5 rounded-lg rotate-45"></div>
+
+            {/* Grid pattern */}
+            <div className="absolute inset-0 opacity-20">
+              <div
+                className="h-full w-full"
+                style={{
+                  backgroundImage: `linear-gradient(rgba(48, 213, 200, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(48, 213, 200, 0.1) 1px, transparent 1px)`,
+                  backgroundSize: "60px 60px",
+                }}
+              ></div>
+            </div>
+
+            {/* Diagonal lines */}
+            <div className="absolute top-0 right-0 w-full h-full">
+              <div className="absolute top-1/4 right-1/4 w-96 h-px bg-gradient-to-r from-transparent via-[#30D5C8]/30 to-transparent rotate-45"></div>
+              <div className="absolute top-1/2 right-1/3 w-64 h-px bg-gradient-to-r from-transparent via-[#30D5C8]/20 to-transparent rotate-45"></div>
+              <div className="absolute bottom-1/4 right-1/2 w-48 h-px bg-gradient-to-r from-transparent via-[#30D5C8]/15 to-transparent rotate-45"></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container relative z-10 mx-auto max-w-screen-xl px-4 sm:px-6">
+          {/* Title Section */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-light text-white leading-tight mb-6">
+              Wir sind die Architekten
+              <span className="block text-[#30D5C8] font-normal">
+                Ihrer Effizienz
+              </span>
+            </h2>
+            <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+              Wir kombinieren juristisches Fachwissen mit technischer Exzellenz,
+              um Ihrer Kanzlei die Werkzeuge an die Hand zu geben, die sie für
+              beispiellosen Erfolg benötigt.
+            </p>
+          </div>
+
+          {/* Founders Grid - Same Height */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <FounderCard
+              imageUrl="/images/placeholder.png"
+              name="Furkan"
+              role="Co-Founder & AI Architect"
+              bio="Experte für KI-Integration und Automatisierung. Furkan führt AF Automations mit einer Vision für transformative juristische Technologien."
+              expertise={[
+                "Business Strategy",
+                "AI Implementation",
+                "Legal Tech",
+                "Process Optimization",
+              ]}
+              experience="8+ Jahre Erfahrung"
+            />
+            <FounderCard
+              imageUrl="/images/alessio.jpg"
+              name="Alessio"
+              role="Co-Founder & Product Manager"
+              bio="Technischer Visionär mit Expertise in KI und Automatisierung. Alessio entwickelt die innovativen Lösungen, die Kanzleien revolutionieren."
+              expertise={[
+                "Machine Learning",
+                "Software Architecture",
+                "Automation",
+                "System Design",
+              ]}
+              experience="10+ Jahre Erfahrung"
+            />
+          </div>
+
+          {/* Centered CTA */}
+          <div className="text-center">
+            <button className="px-8 py-4 rounded-full bg-white hover:bg-gray-200 text-black font-semibold text-base transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 shadow-lg hover:shadow-xl">
+              Jetzt Termin vereinbaren
+            </button>
+          </div>
+        </div>
+      </section>
+      {/* --- END OF FOUNDERS SECTION --- */}
 
       {/* Floating Contact Button */}
       <div className="fixed bottom-6 right-6 z-50">

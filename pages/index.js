@@ -454,81 +454,145 @@ export default function HomePage() {
       {/* --- FOUNDERS SECTION --- */}
       <section
         id="founders"
-        className="relative overflow-hidden bg-gradient-to-br from-[#0A192F] via-[#1e293b] to-[#0f172a] py-20 text-white sm:py-28"
+        className="relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-[#30D5C8] py-20 text-white sm:py-28"
       >
-        {/* Animated Background */}
+        {/* Dynamic Background with Curved Lines */}
         <div className="absolute inset-0">
-          {/* Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#30D5C8]/5 via-transparent to-purple-500/5"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/80 via-transparent to-[#0A192F]/40"></div>
+          {/* Main Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900/90 to-[#30D5C8]"></div>
 
-          {/* Geometric Patterns */}
-          <div className="absolute left-0 top-0 h-full w-full">
-            <div className="absolute left-10 top-20 h-32 w-32 rotate-45 rounded-lg border border-[#30D5C8]/20 animate-pulse"></div>
-            <div className="absolute right-20 top-40 h-24 w-24 rotate-12 rounded-full border-2 border-purple-400/20 animate-spin-slow"></div>
-            <div className="absolute bottom-32 left-1/4 h-16 w-16 rotate-45 bg-gradient-to-br from-[#30D5C8]/10 to-transparent rounded-lg"></div>
-            <div className="absolute bottom-40 right-1/3 h-20 w-20 rotate-12 border border-pink-400/20 rounded-full animate-bounce-slow"></div>
+          {/* Curved Line Patterns */}
+          <div className="absolute inset-0 opacity-30">
+            <svg
+              className="absolute right-0 top-0 h-full w-full"
+              viewBox="0 0 1200 800"
+              fill="none"
+            >
+              {/* Multiple curved lines creating depth */}
+              <path
+                d="M800 0 Q1000 200 1200 100 L1200 0 Z"
+                fill="url(#gradient1)"
+                className="opacity-40"
+              />
+              <path
+                d="M900 0 Q1100 250 1200 150 L1200 0 Z"
+                fill="url(#gradient2)"
+                className="opacity-30"
+              />
+              <path
+                d="M1000 0 Q1150 300 1200 200 L1200 0 Z"
+                fill="url(#gradient3)"
+                className="opacity-20"
+              />
+              <defs>
+                <linearGradient
+                  id="gradient1"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#30D5C8" stopOpacity="0.1" />
+                  <stop offset="100%" stopColor="#50E0D0" stopOpacity="0.3" />
+                </linearGradient>
+                <linearGradient
+                  id="gradient2"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#50E0D0" stopOpacity="0.1" />
+                  <stop offset="100%" stopColor="#60E6D7" stopOpacity="0.2" />
+                </linearGradient>
+                <linearGradient
+                  id="gradient3"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#60E6D7" stopOpacity="0.05" />
+                  <stop offset="100%" stopColor="#30D5C8" stopOpacity="0.15" />
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
 
-          {/* Floating Particles */}
-          <div className="absolute inset-0">
-            <div className="absolute left-1/4 top-1/4 h-2 w-2 rounded-full bg-[#30D5C8]/40 animate-float"></div>
-            <div className="absolute right-1/3 top-1/3 h-1 w-1 rounded-full bg-purple-400/60 animate-float-delayed"></div>
-            <div className="absolute left-1/2 bottom-1/4 h-3 w-3 rounded-full bg-pink-400/30 animate-float-slow"></div>
-            <div className="absolute right-1/4 bottom-1/3 h-1.5 w-1.5 rounded-full bg-[#50E0D0]/50 animate-float"></div>
-          </div>
+          {/* Additional curved overlay for depth */}
+          <div className="absolute bottom-0 right-0 h-2/3 w-2/3 bg-gradient-to-tl from-[#30D5C8]/20 to-transparent opacity-50"></div>
         </div>
 
-        <div className="container relative z-10 mx-auto max-w-screen-xl px-4 text-center sm:px-6">
-          <div className="mb-16">
-            <h2 className="bg-gradient-to-r from-white via-[#30D5C8] to-white bg-clip-text text-3xl font-bold text-transparent sm:text-5xl">
-              Wir sind die Architekten Ihrer Effizienz
-            </h2>
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-gray-300 sm:text-xl">
-              Wir kombinieren juristisches Fachwissen mit technischer Exzellenz,
-              um Ihrer Kanzlei die Werkzeuge an die Hand zu geben, die sie für
-              beispiellosen Erfolg benötigt.
-            </p>
-          </div>
+        <div className="container relative z-10 mx-auto max-w-screen-xl px-4 sm:px-6">
+          {/* Left side content */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Wir sind die Architekten
+                  <span className="block text-[#30D5C8]">Ihrer Effizienz</span>
+                </h2>
+                <p className="mt-6 text-xl text-gray-300 leading-relaxed">
+                  Wir kombinieren juristisches Fachwissen mit technischer
+                  Exzellenz, um Ihrer Kanzlei die Werkzeuge an die Hand zu
+                  geben, die sie für beispiellosen Erfolg benötigt.
+                </p>
+              </div>
 
-          <div className="flex flex-col items-center justify-center gap-12 lg:flex-row lg:gap-16">
-            <FounderCard
-              imageUrl="/images/placeholder.png"
-              name="Furkan"
-              role="Co-Founder & CEO"
-              bio="Experte für Geschäftsstrategie und KI-Integration. Furkan führt AF Automations mit einer Vision für transformative juristische Technologien."
-              expertise={[
-                "Business Strategy",
-                "AI Implementation",
-                "Legal Tech",
-                "Process Optimization",
-              ]}
-              experience="8+ Jahre Erfahrung"
-            />
-            <FounderCard
-              imageUrl="/images/placeholder.png"
-              name="Arda"
-              role="Co-Founder & CTO"
-              bio="Technischer Visionär mit Expertise in KI und Automatisierung. Arda entwickelt die innovativen Lösungen, die Kanzleien revolutionieren."
-              expertise={[
-                "Machine Learning",
-                "Software Architecture",
-                "Automation",
-                "System Design",
-              ]}
-              experience="10+ Jahre Erfahrung"
-            />
-          </div>
+              {/* Stats */}
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl font-bold text-[#30D5C8]">8+</div>
+                  <div className="text-gray-300">Jahre Erfahrung</div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="flex -space-x-2">
+                    <div className="w-8 h-8 rounded-full bg-[#30D5C8] border-2 border-white"></div>
+                    <div className="w-8 h-8 rounded-full bg-[#50E0D0] border-2 border-white"></div>
+                    <div className="w-8 h-8 rounded-full bg-[#60E6D7] border-2 border-white flex items-center justify-center text-xs font-bold text-black">
+                      +
+                    </div>
+                  </div>
+                  <div className="text-gray-300">50+ Zufriedene Kanzleien</div>
+                </div>
+              </div>
 
-          {/* Call to Action */}
-          <div className="mt-16">
-            <p className="mb-8 text-lg text-gray-300">
-              Bereit, Ihre Kanzlei zu transformieren?
-            </p>
-            <button className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#30D5C8] to-[#50E0D0] px-8 py-4 font-semibold text-white shadow-2xl transition-all duration-300 hover:from-[#50E0D0] hover:to-[#30D5C8] hover:shadow-[0_0_30px_rgba(48,213,200,0.5)] hover:scale-105">
-              <span className="relative z-10">Jetzt Termin vereinbaren</span>
-              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full"></div>
-            </button>
+              {/* CTA Button */}
+              <button className="group relative overflow-hidden rounded-full bg-white text-black px-8 py-4 font-semibold text-lg shadow-2xl transition-all duration-300 hover:bg-[#30D5C8] hover:text-white hover:scale-105">
+                <span className="relative z-10">Jetzt Termin vereinbaren</span>
+                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[#30D5C8]/20 to-transparent transition-transform duration-700 group-hover:translate-x-full"></div>
+              </button>
+            </div>
+
+            {/* Right side - Founder Cards */}
+            <div className="flex flex-col space-y-8">
+              <FounderCard
+                imageUrl="/images/placeholder.png"
+                name="Furkan"
+                role="Co-Founder & CEO"
+                bio="Experte für Geschäftsstrategie und KI-Integration. Furkan führt AF Automations mit einer Vision für transformative juristische Technologien."
+                expertise={[
+                  "Business Strategy",
+                  "AI Implementation",
+                  "Legal Tech",
+                  "Process Optimization",
+                ]}
+                experience="8+ Jahre Erfahrung"
+              />
+              <FounderCard
+                imageUrl="/images/placeholder.png"
+                name="Arda"
+                role="Co-Founder & CTO"
+                bio="Technischer Visionär mit Expertise in KI und Automatisierung. Arda entwickelt die innovativen Lösungen, die Kanzleien revolutionieren."
+                expertise={[
+                  "Machine Learning",
+                  "Software Architecture",
+                  "Automation",
+                  "System Design",
+                ]}
+                experience="10+ Jahre Erfahrung"
+              />
+            </div>
           </div>
         </div>
       </section>

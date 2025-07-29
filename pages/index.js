@@ -498,11 +498,11 @@ export default function HomePage() {
       {/* --- FOUNDERS SECTION --- */}
       <section
         id="founders"
-        className="relative overflow-hidden bg-gradient-to-b from-black to-[#0A192F] py-20 text-white sm:py-28"
+        className="relative overflow-hidden bg-black py-20 text-white sm:py-28"
       >
         {/* Modern Background Structure */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0A192F] to-[#1e293b]"></div>
+          <div className="absolute inset-0 bg-black"></div>
 
           {/* Geometric Background Elements */}
           <div className="absolute inset-0">

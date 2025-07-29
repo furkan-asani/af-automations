@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer
       id="footer-contact" // Keep id if it's used for navigation, or remove if only for styling context
-      className="bg-gray-900 text-white py-12 text-center"
+      className="bg-black text-white py-12 text-center"
     >
       <p className="mb-3 text-gray-300">
         © {new Date().getFullYear()} AF Automations. Alle Rechte vorbehalten.
@@ -13,17 +13,23 @@ const Footer = () => {
         Intelligente Automatisierung für die moderne Anwaltskanzlei.
         <a
           href="mailto:info@afautomations.de"
-          className="underline hover:text-blue-400 ml-2"
+          className="underline hover:text-[#30D5C8] ml-2 transition-colors"
         >
           Kontaktieren Sie uns
         </a>
       </p>
       <div className="text-sm text-gray-400 space-x-4">
-        <a href="/impressum" className="underline hover:text-blue-400">
+        <a
+          href="/impressum"
+          className="underline hover:text-[#30D5C8] transition-colors"
+        >
           Impressum
         </a>
         <span>|</span>
-        <a href="/datenschutz" className="underline hover:text-blue-400">
+        <a
+          href="/datenschutz"
+          className="underline hover:text-[#30D5C8] transition-colors"
+        >
           Datenschutz
         </a>
       </div>

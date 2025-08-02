@@ -551,28 +551,21 @@ export default function HomePage() {
             <FounderCard
               imageUrl="/images/alessio.jpg"
               name="Alessio"
-              role="Co-Founder & Product Manager"
-              bio="Technischer Visionär mit Expertise in KI und Automatisierung. Alessio entwickelt die innovativen Lösungen, die Kanzleien revolutionieren."
+              role="Co-Founder, M.Sc. Business Consulting & Digital Management"
+              bio="Als Produktmanager kümmert sich Alessio um reibungslose Abläufe und das Kundenmanagement."
               expertise={[
-                "Machine Learning",
-                "Software Architecture",
-                "Automation",
-                "System Design",
+                "Process Optimization",
+                "Customer Management",
+                "AI Integration",
+                "Automatisierung",
               ]}
-              experience="10+ Jahre Erfahrung"
             />{" "}
             <FounderCard
               imageUrl="/images/placeholder.png"
               name="Furkan"
-              role="Co-Founder & AI Architect"
-              bio="Experte für KI-Integration und Automatisierung. Furkan führt AF Automations mit einer Vision für transformative juristische Technologien."
-              expertise={[
-                "Business Strategy",
-                "AI Implementation",
-                "Legal Tech",
-                "Process Optimization",
-              ]}
-              experience="8+ Jahre Erfahrung"
+              role="Co-Founder & AI Architect, B.Sc. Wirtschaftsinformatik"
+              bio="Als Experte für KI-Integration und Automatisierung führt Furkan AF Automations mit einer Vision für transformative juristische Technologien."
+              expertise={["AI Integration", "Legal Tech", "Automatisierung"]}
             />
           </div>
         </div>
